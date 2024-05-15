@@ -1,0 +1,35 @@
+package com.mycompany.palindromos;
+
+import java.util.Scanner;
+
+
+public class palindromos{
+
+    public static void main(String[]args) {
+       Scanner s = new Scanner(System.in);
+       
+       String palabra;
+       char[] palindromo;
+       int izq, der;
+       
+        System.out.println("Ingrese una  palabra");
+        palabra = s.nextLine();
+        palindromo = palabra.toCharArray();
+        izq = 0;
+        der = palindromo.length;
+        
+        while(izq <der){
+            if(palindromo[izq]==palindromo [der]){
+                der --;
+                izq++;
+            }else{
+                System.out.println("La palabra no es un palindromo");
+                break;  
+            }
+        }
+        
+      if (izq == der);
+        System.out.println("La palabra si es un palindromo");
+       } 
+    }  
+}
